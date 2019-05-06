@@ -10,6 +10,8 @@
 
 ###### Some of the routes are protected
 
+###### Navbar changes based on authentication / guest mode
+
 ## May 1, 2019 Update
 
 ###### Image URL option has been added
