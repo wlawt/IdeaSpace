@@ -4,6 +4,16 @@
 
 # Update threads
 
+## May 6, 2019 Update
+
+###### Dashboard profile setup feature has been added
+
+###### View profile feature has been added
+
+###### View other's profile is in works
+
+###### View posts on that profile feature has been added
+
 ## May 5, 2019 Update
 
 ###### Login / Signup system added
