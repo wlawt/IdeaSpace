@@ -39,10 +39,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authorizeRequests().antMatchers("/")
                 .permitAll().antMatchers("/login").permitAll().antMatchers("/api/auth/login").permitAll()
                 .antMatchers("/api/auth/register").permitAll().antMatchers("/api/products/**").permitAll()
-                .antMatchers("/createprofile").permitAll().antMatchers("/displayprofile").permitAll()
-                .antMatchers("/posts/**").permitAll().antMatchers("/profile/**").permitAll().antMatchers("/comments/**")
-                .permitAll().anyRequest().authenticated().and().csrf().disable().exceptionHandling()
-                .authenticationEntryPoint(unauthorizedEntryPoint()).and().apply(new JwtConfigurer(jwtTokenProvider));
+                .antMatchers("/createprofile/**").permitAll().antMatchers("/displayprofile").permitAll()
+                .antMatchers("/roles").permitAll().antMatchers("/posts/**").permitAll().antMatchers("/profile/**")
+                .permitAll().antMatchers("/comments/**").permitAll().anyRequest().authenticated().and().csrf().disable()
+                .exceptionHandling().authenticationEntryPoint(unauthorizedEntryPoint()).and()
+                .apply(new JwtConfigurer(jwtTokenProvider));
         // .antMatchers("/api/products/**").hasAuthority("ADMIN")
     }
 

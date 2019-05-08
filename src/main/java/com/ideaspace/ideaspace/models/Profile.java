@@ -9,11 +9,22 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "profile")
 public class Profile {
     @Id
-    private String id;
-    private String profileID;
-    private String profilePic;
-    private String bgPic;
-    private String bioInfo;
+    String id;
+    String profileID;
+    String profilePic;
+    String bgPic;
+    String bioInfo;
+
+    public Profile() {
+    }
+
+    public Profile(String id, String profileID, String profilePic, String bgPic, String bioInfo) {
+        /* this.name = name; */
+        this.profileID = profileID;
+        this.profilePic = profilePic;
+        this.bgPic = bgPic;
+        this.bioInfo = bioInfo;
+    }
 
     public String getId() {
         return id;

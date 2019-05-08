@@ -20,7 +20,7 @@ public class ProfileController {
     /*
      * Route: /createprofile Status: PUBLIC FUNC: Update profile database
      */
-    @RequestMapping(method = RequestMethod.POST, value = "/createprofile")
+    @RequestMapping(method = RequestMethod.POST, value = "/createprofile/{id}")
     public Profile save(@RequestBody Profile profile) {
         profileRepository.save(profile);
 
