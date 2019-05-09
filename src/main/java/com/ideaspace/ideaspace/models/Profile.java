@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Profile {
     @Id
     String id;
-    String profileID;
+    String accountId;
     String profilePic;
     String bgPic;
     String bioInfo;
@@ -18,9 +18,9 @@ public class Profile {
     public Profile() {
     }
 
-    public Profile(String id, String profileID, String profilePic, String bgPic, String bioInfo) {
-        /* this.name = name; */
-        this.profileID = profileID;
+    public Profile(String id, String accountId, String profilePic, String bgPic, String bioInfo) {
+        this.id = id;
+        this.accountId = accountId;
         this.profilePic = profilePic;
         this.bgPic = bgPic;
         this.bioInfo = bioInfo;
@@ -34,12 +34,12 @@ public class Profile {
         this.id = id;
     }
 
-    public String getProfileId() {
-        return profileID;
+    public String getAccountId() {
+        return accountId;
     }
 
-    public void setProfileId(String profileID) {
-        this.profileID = profileID;
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
     }
 
     public String getProfilePic() {

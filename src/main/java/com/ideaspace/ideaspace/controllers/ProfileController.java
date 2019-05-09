@@ -20,19 +20,19 @@ public class ProfileController {
     /*
      * Route: /createprofile Status: PUBLIC FUNC: Update profile database
      */
-    @RequestMapping(method = RequestMethod.POST, value = "/createprofile/{id}")
+    /*
+     * Route: /displayprofile Status: PUBLIC FUNC: Get listings of profiles
+     */
+    @RequestMapping(method = RequestMethod.GET, value = "/profile")
+    public Iterable<Profile> profile() {
+        return profileRepository.findAll();
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/profile/{id}")
     public Profile save(@RequestBody Profile profile) {
         profileRepository.save(profile);
 
         return profile;
-    }
-
-    /*
-     * Route: /displayprofile Status: PUBLIC FUNC: Get listings of profiles
-     */
-    @RequestMapping(method = RequestMethod.GET, value = "/displayprofile")
-    public Iterable<Profile> profile() {
-        return profileRepository.findAll();
     }
 
     /*

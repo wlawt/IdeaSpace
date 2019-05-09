@@ -4,9 +4,15 @@
 
 # Update threads
 
+## May 8, 2019 Update
+
+###### Account IDs generated
+
+###### Linking account IDs to profile, comments, posts (word in progress)
+
 ## May 7, 2019 Update
 
-###### Unique account IDs being created (work in progress)
+###### Unique account IDs being created
 
 ## May 6, 2019 Update
 
