@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Post {
     @Id
     String id;
+    String accountId;
     String name;
     String title;
     String subTitle;
@@ -16,7 +17,8 @@ public class Post {
     public Post() {
     }
 
-    public Post(String name, String title, String subTitle, String body, String imageURL) {
+    public Post(String accountId, String name, String title, String subTitle, String body, String imageURL) {
+        this.accountId = accountId;
         this.name = name;
         this.title = title;
         this.subTitle = subTitle;
@@ -31,6 +33,14 @@ public class Post {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
     }
 
     public String getName() {

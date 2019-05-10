@@ -6,8 +6,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "comments")
 public class Comment {
     @Id
-    String commentId;
     String id;
+    String postId;
+    String accountId;
     /* String name; */
     String comment;
     int like = 0;
@@ -16,9 +17,10 @@ public class Comment {
     public Comment() {
     }
 
-    public Comment(String id, String commentId, String comment, int like, int dislike) {
+    public Comment(String id, String postId, String accountId, String comment, int like, int dislike) {
         /* this.name = name; */
-        this.commentId = commentId;
+        this.postId = postId;
+        this.accountId = accountId;
         this.comment = comment;
         this.like = like;
         this.dislike = dislike;
@@ -33,12 +35,20 @@ public class Comment {
         this.id = id;
     }
 
-    public String getCommentId() {
-        return commentId;
+    public String getPostId() {
+        return postId;
     }
 
-    public void setCommentId(String commentId) {
-        this.commentId = commentId;
+    public void setPostId(String postId) {
+        this.postId = postId;
+    }
+
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
     }
 
     /*

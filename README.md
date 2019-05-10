@@ -4,6 +4,18 @@
 
 # Update threads
 
+## May 9, 2019 Update
+
+###### Account IDs created
+
+###### Account ID linked to posts
+
+###### Account ID linked to comments
+
+###### Account permissions changed (i.e. editing is only for owner, deleting comments only for owner of the comment)
+
+###### Logout page created and created logout redirect function
+
 ## May 8, 2019 Update
 
 ###### Account IDs generated

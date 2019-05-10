@@ -28,7 +28,7 @@ public class PostController {
      * Route: /posts Status: PRIVATE FUNC: Add a post
      */
     // TODO ~ MAKE PRIVATE
-    @RequestMapping(method = RequestMethod.POST, value = "/posts")
+    @RequestMapping(method = RequestMethod.POST, value = "/posts/{id}")
     public Post save(@RequestBody Post post) {
         postRepository.save(post);
 
