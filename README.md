@@ -4,6 +4,12 @@
 
 # Update threads
 
+## May 10, 2019 Update
+
+###### Edit profile function (work in progress)
+
+###### Adding social media options (work in progress)
+
 ## May 9, 2019 Update
 
 ###### Account IDs created
@@ -20,7 +26,7 @@
 
 ###### Account IDs generated
 
-###### Linking account IDs to profile, comments, posts (word in progress)
+###### Linking account IDs to profile, comments, posts
 
 ## May 7, 2019 Update
 

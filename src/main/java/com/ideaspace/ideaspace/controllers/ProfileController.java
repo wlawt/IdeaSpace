@@ -52,4 +52,21 @@ public class ProfileController {
 
         return "";
     }
+
+    @RequestMapping(method = RequestMethod.PUT, value = "/profile/edit/{id}")
+    public Profile update(@PathVariable String id, @RequestBody Profile profile) {
+        Optional<Profile> optProfile = profileRepository.findById(id);
+        Profile p = optProfile.get();
+
+        if (profile.getProfilePic() != null)
+            p.setProfilePic(profile.getProfilePic());
+        if (profile.getBgPic() != null)
+            p.setBgPic(profile.getBgPic());
+        if (profile.getBioInfo() != null)
+            p.setBioInfo(profile.getBioInfo());
+
+        profileRepository.save(p);
+
+        return p;
+    }
 }
