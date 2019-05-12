@@ -9,29 +9,30 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "profile")
 public class Profile {
     @Id
-    String id;
     String accountId;
+    String id;
     String profilePic;
     String bgPic;
     String bioInfo;
+    String instagram;
+    String github;
+    String facebook;
+    String linkedin;
 
     public Profile() {
     }
 
-    public Profile(String id, String accountId, String profilePic, String bgPic, String bioInfo) {
-        this.id = id;
+    public Profile(String accountId, String id, String profilePic, String bgPic, String bioInfo, String instagram,
+            String github, String facebook, String linkedin) {
         this.accountId = accountId;
+        this.id = id;
         this.profilePic = profilePic;
         this.bgPic = bgPic;
         this.bioInfo = bioInfo;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+        this.instagram = instagram;
+        this.facebook = facebook;
+        this.github = github;
+        this.linkedin = linkedin;
     }
 
     public String getAccountId() {
@@ -40,6 +41,14 @@ public class Profile {
 
     public void setAccountId(String accountId) {
         this.accountId = accountId;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getProfilePic() {
@@ -64,5 +73,37 @@ public class Profile {
 
     public void setBioInfo(String bioInfo) {
         this.bioInfo = bioInfo;
+    }
+
+    public String getFacebook() {
+        return facebook;
+    }
+
+    public void setFacebook(String facebook) {
+        this.facebook = facebook;
+    }
+
+    public String getGithub() {
+        return github;
+    }
+
+    public void setGithub(String github) {
+        this.github = github;
+    }
+
+    public String getInstagram() {
+        return instagram;
+    }
+
+    public void setInstagram(String instagram) {
+        this.instagram = instagram;
+    }
+
+    public String getLinkedin() {
+        return linkedin;
+    }
+
+    public void setLinkedin(String linkedin) {
+        this.linkedin = linkedin;
     }
 }

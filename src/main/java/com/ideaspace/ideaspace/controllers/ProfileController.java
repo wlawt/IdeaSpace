@@ -53,7 +53,7 @@ public class ProfileController {
         return "";
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/profile/edit/{id}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/profile/{id}")
     public Profile update(@PathVariable String id, @RequestBody Profile profile) {
         Optional<Profile> optProfile = profileRepository.findById(id);
         Profile p = optProfile.get();
@@ -64,6 +64,14 @@ public class ProfileController {
             p.setBgPic(profile.getBgPic());
         if (profile.getBioInfo() != null)
             p.setBioInfo(profile.getBioInfo());
+        if (profile.getInstagram() != null)
+            p.setInstagram(profile.getInstagram());
+        if (profile.getFacebook() != null)
+            p.setFacebook(profile.getFacebook());
+        if (profile.getLinkedin() != null)
+            p.setLinkedin(profile.getLinkedin());
+        if (profile.getGithub() != null)
+            p.setGithub(profile.getGithub());
 
         profileRepository.save(p);
 

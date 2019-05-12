@@ -4,11 +4,19 @@
 
 # Update threads
 
+## May 11, 2019 Update
+
+###### Completed edit profile function
+
+###### Social media icons and function added
+
+###### Profile UI changed and made scalable
+
 ## May 10, 2019 Update
 
-###### Edit profile function (work in progress)
+###### Edit profile function
 
-###### Adding social media options (work in progress)
+###### Adding social media options
 
 ## May 9, 2019 Update
 
