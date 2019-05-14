@@ -4,6 +4,14 @@
 
 # Update threads
 
+## May 13, 2019 Update
+
+###### Specific profile routes are being made /profile/:id
+
+###### Specific Post UI layout changed
+
+###### Comment section UI layout minor edits
+
 ## May 11, 2019 Update
 
 ###### Completed edit profile function
