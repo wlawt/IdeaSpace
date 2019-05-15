@@ -18,12 +18,13 @@ public class Profile {
     String github;
     String facebook;
     String linkedin;
+    String fullname;
 
     public Profile() {
     }
 
-    public Profile(String accountId, String id, String profilePic, String bgPic, String bioInfo, String instagram,
-            String github, String facebook, String linkedin) {
+    public Profile(String accountId, String id, String fullname, String profilePic, String bgPic, String bioInfo,
+            String instagram, String github, String facebook, String linkedin) {
         this.accountId = accountId;
         this.id = id;
         this.profilePic = profilePic;
@@ -33,6 +34,7 @@ public class Profile {
         this.facebook = facebook;
         this.github = github;
         this.linkedin = linkedin;
+        this.fullname = fullname;
     }
 
     public String getAccountId() {
@@ -49,6 +51,14 @@ public class Profile {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
     public String getProfilePic() {

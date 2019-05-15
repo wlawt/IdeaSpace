@@ -4,6 +4,14 @@
 
 # Update threads
 
+## May 14, 2019 Update
+
+###### /profile/:id route created and functioning
+
+###### Post body line breaks are preserved
+
+###### Adding more text customization using CKEditor (work in progress)
+
 ## May 13, 2019 Update
 
 ###### Specific profile routes are being made /profile/:id
