@@ -4,6 +4,14 @@
 
 # Update threads
 
+## May 16, 2019 Update
+
+###### Login/Signup UI updated
+
+###### Delete comment function working
+
+###### (Work in progress) Developing the like function
+
 ## May 14, 2019 Update
 
 ###### /profile/:id route created and functioning

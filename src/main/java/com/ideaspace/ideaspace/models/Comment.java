@@ -1,5 +1,7 @@
 package com.ideaspace.ideaspace.models;
 
+import java.util.ArrayList;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -12,17 +14,20 @@ public class Comment {
     /* String name; */
     String comment;
     int like = 0;
+    ArrayList<String> likes = new ArrayList<>();
     int dislike = 0;
 
     public Comment() {
     }
 
-    public Comment(String id, String postId, String accountId, String comment, int like, int dislike) {
+    public Comment(String id, String postId, ArrayList<String> likes, String accountId, String comment, int like,
+            int dislike) {
         /* this.name = name; */
         this.postId = postId;
         this.accountId = accountId;
         this.comment = comment;
         this.like = like;
+        this.likes = likes;
         this.dislike = dislike;
     }
 
@@ -57,6 +62,14 @@ public class Comment {
      * public void setName(String name) { this.name = name; }
      */
 
+    public int getLikes() {
+        return likes.size();
+    }
+
+    /*
+     * public void setLikes(String i) { this.likes = likes; }
+     */
+
     public String getComment() {
         return comment;
     }
@@ -70,7 +83,7 @@ public class Comment {
     }
 
     public void setLike(int like) {
-        this.like = like + 1;
+        this.like = this.like + 1;
     }
 
     public int getDislike() {
