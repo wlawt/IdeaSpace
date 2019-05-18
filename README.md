@@ -4,6 +4,10 @@
 
 # Update threads
 
+## May 17, 2019 Update
+
+###### Sort by hashtag function (work in progress)
+
 ## May 16, 2019 Update
 
 ###### Login/Signup UI updated
