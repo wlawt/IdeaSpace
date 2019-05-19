@@ -12,17 +12,20 @@ public class Post {
     String title;
     String subTitle;
     String body;
+    String hashtag;
     String imageURL;
 
     public Post() {
     }
 
-    public Post(String accountId, String name, String title, String subTitle, String body, String imageURL) {
+    public Post(String accountId, String name, String title, String subTitle, String body, String hashtag,
+            String imageURL) {
         this.accountId = accountId;
         this.name = name;
         this.title = title;
         this.subTitle = subTitle;
         this.body = body;
+        this.hashtag = hashtag;
         this.imageURL = imageURL;
     }
 
@@ -73,6 +76,14 @@ public class Post {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    public String getHashtag() {
+        return hashtag;
+    }
+
+    public void setHashtag(String hashtag) {
+        this.hashtag = hashtag;
     }
 
     public String getImageURL() {

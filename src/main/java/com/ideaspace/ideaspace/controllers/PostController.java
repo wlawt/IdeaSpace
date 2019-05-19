@@ -52,6 +52,8 @@ public class PostController {
             p.setSubTitle(post.getSubTitle());
         if (post.getBody() != null)
             p.setBody(post.getBody());
+        if (post.getHashtag() != null)
+            p.setHashtag(post.getHashtag());
         if (post.getImageURL() != null)
             p.setImageURL(post.getImageURL());
 
