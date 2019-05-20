@@ -40,10 +40,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll().antMatchers("/login").permitAll().antMatchers("/api/auth/login").permitAll()
                 .antMatchers("/api/auth/register").permitAll().antMatchers("/api/products/**").permitAll()
                 .antMatchers("/profile/**").permitAll().antMatchers("/users/**").permitAll().antMatchers("/roles")
-                .permitAll().antMatchers("/posts/**").permitAll().antMatchers("/profile/**").permitAll()
-                .antMatchers("/comments/**").permitAll().anyRequest().authenticated().and().csrf().disable()
-                .exceptionHandling().authenticationEntryPoint(unauthorizedEntryPoint()).and()
-                .apply(new JwtConfigurer(jwtTokenProvider));
+                .permitAll().antMatchers("/hashtags/**").permitAll().antMatchers("/posts/**").permitAll()
+                .antMatchers("/profile/**").permitAll().antMatchers("/comments/**").permitAll().anyRequest()
+                .authenticated().and().csrf().disable().exceptionHandling()
+                .authenticationEntryPoint(unauthorizedEntryPoint()).and().apply(new JwtConfigurer(jwtTokenProvider));
         // .antMatchers("/api/products/**").hasAuthority("ADMIN")
     }
 

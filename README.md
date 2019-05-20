@@ -4,6 +4,10 @@
 
 # Update threads
 
+## May 19, 2019 Update
+
+###### Sorting function api in progress
+
 ## May 18, 2019 Update
 
 ###### Color change when you click on a hashtag
