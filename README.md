@@ -39,6 +39,7 @@ npm install --save axios jwt-decode react-redux react-router-dom redux redux-thu
 - Spring Boot 2.1.5
 - Spring Security
 - Spring Web
+  To install Spring Boot and its dependencies, use this [link]: https://start.spring.io/
 
 ## Update threads
 
