@@ -27,6 +27,19 @@ npm start
 ./gradlew bootRun
 ```
 
+#### Node dependencies required to run the project:
+
+```
+npm install --save axios jwt-decode react-redux react-router-dom redux redux-thunk
+```
+
+#### Other requirements:
+
+- Java 1.8
+- Spring Boot 2.1.5
+- Spring Security
+- Spring Web
+
 ## Update threads
 
 ### May 20, 2019 Update
