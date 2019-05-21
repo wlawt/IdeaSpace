@@ -1,143 +1,192 @@
-# IdeaSpace - ICS Summative
+## IdeaSpace - ICS Summative
 
-## A blogging web application for people to share their journeys / experiences.
+A blogging web application for people to share their journeys / experiences.
 
-# Update threads
+## Running Ideaspace
 
-## May 19, 2019 Update
+### Downloading the source code
 
-###### Sorting function api in progress
+#### Clone the repository:
 
-## May 18, 2019 Update
+```
+git clone https://github.com/tRieMeRalD/IdeaSpace.git
+cd IdeaSpace
+```
 
-###### Color change when you click on a hashtag
+#### To run ReactJS build:
 
-###### Hashtags now show up on the main post page
+```
+cd client
+npm run build
+npm start
+```
 
-###### Hashtags show up for individual posts
+#### To run the application locally (ReactJS and Java):
 
-## May 17, 2019 Update
+```
+./gradlew bootRun
+```
 
-###### Sort by hashtag function
+## Update threads
 
-## May 16, 2019 Update
+### May 19, 2019 Update
 
-###### Login/Signup UI updated
+Sorting function api in progress
 
-###### Delete comment function working
+### May 18, 2019 Update
 
-###### (Work in progress) Developing the like function
+Color change when you click on a hashtag
 
-## May 14, 2019 Update
+Hashtags now show up on the main post page
 
-###### /profile/:id route created and functioning
+Hashtags show up for individual posts
 
-###### Post body line breaks are preserved
+### May 17, 2019 Update
 
-###### Adding more text customization using CKEditor (work in progress)
+Sort by hashtag function
 
-## May 13, 2019 Update
+### May 16, 2019 Update
 
-###### Specific profile routes are being made /profile/:id
+Login/Signup UI updated
 
-###### Specific Post UI layout changed
+Delete comment function working
 
-###### Comment section UI layout minor edits
+(Work in progress) Developing the like function
 
-## May 11, 2019 Update
+### May 14, 2019 Update
 
-###### Completed edit profile function
+/profile/:id route created and functioning
 
-###### Social media icons and function added
+Post body line breaks are preserved
 
-###### Profile UI changed and made scalable
+Adding more text customization using CKEditor (work in progress)
 
-## May 10, 2019 Update
+### May 13, 2019 Update
 
-###### Edit profile function
+Specific profile routes are being made /profile/:id
 
-###### Adding social media options
+Specific Post UI layout changed
 
-## May 9, 2019 Update
+Comment section UI layout minor edits
 
-###### Account IDs created
+### May 11, 2019 Update
 
-###### Account ID linked to posts
+Completed edit profile function
 
-###### Account ID linked to comments
+Social media icons and function added
 
-###### Account permissions changed (i.e. editing is only for owner, deleting comments only for owner of the comment)
+Profile UI changed and made scalable
 
-###### Logout page created and created logout redirect function
+### May 10, 2019 Update
 
-## May 8, 2019 Update
+Edit profile function
 
-###### Account IDs generated
+Adding social media options
 
-###### Linking account IDs to profile, comments, posts
+### May 9, 2019 Update
 
-## May 7, 2019 Update
+Account IDs created
 
-###### Unique account IDs being created
+Account ID linked to posts
 
-## May 6, 2019 Update
+Account ID linked to comments
 
-###### Dashboard profile setup feature has been added
+Account permissions changed (i.e. editing is only for owner, deleting comments only for owner of the comment)
 
-###### View profile feature has been added
+Logout page created and created logout redirect function
 
-###### View other's profile is in works
+### May 8, 2019 Update
 
-###### View posts on that profile feature has been added
+Account IDs generated
 
-## May 5, 2019 Update
+Linking account IDs to profile, comments, posts
 
-###### Login / Signup system added
+### May 7, 2019 Update
 
-###### Some of the routes are protected
+Unique account IDs being created
 
-###### Navbar changes based on authentication / guest mode
+### May 6, 2019 Update
 
-## May 1, 2019 Update
+Dashboard profile setup feature has been added
 
-###### Image URL option has been added
+View profile feature has been added
 
-###### More UI/UX changes
+View other's profile is in works
 
-###### Comment section: FIXED --> comments for specific posts work
+View posts on that profile feature has been added
 
-## April 30, 2019 Update
+### May 5, 2019 Update
 
-###### UI/UX Design has been changed
+Login / Signup system added
 
-###### Comment section: Still work in progress
+Some of the routes are protected
 
-## April 28, 2019 Update
+Navbar changes based on authentication / guest mode
 
-###### Adding functionality to the comment thread
+### May 1, 2019 Update
 
-###### Bug fix: Multiple comments can be added
+Image URL option has been added
 
-###### Working on like:dislike button functions
+More UI/UX changes
 
-## April 27, 2019 Update
+Comment section: FIXED --> comments for specific posts work
 
-###### Redux added
+### April 30, 2019 Update
 
-###### Comment feature added
+UI/UX Design has been changed
 
-###### UI for like:dislike ratio added
+Comment section: Still work in progress
 
-###### Common components added for scalability
+### April 28, 2019 Update
 
-## April 22, 2019 Update
+Adding functionality to the comment thread
 
-###### CRUD features added
+Bug fix: Multiple comments can be added
 
-###### MongoDB added
+Working on like:dislike button functions
 
-###### ReactJS front-end added
+### April 27, 2019 Update
 
-## April 21, 2019 Update
+Redux added
 
-###### Initial Commit
+Comment feature added
+
+UI for like:dislike ratio added
+
+Common components added for scalability
+
+### April 22, 2019 Update
+
+CRUD features added
+
+MongoDB added
+
+ReactJS front-end added
+
+### April 21, 2019 Update
+
+Initial Commit
+
+## Licence
+
+The MIT License
+
+Copyright (c) 2010-2019 Google, Inc. http://angularjs.org
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
