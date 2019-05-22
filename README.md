@@ -44,6 +44,14 @@ To install Spring Boot and its dependencies, use this [link]
 
 [link]: https://start.spring.io/
 
+## Instructions - Step-by-Step Guide:
+
+#### Login or create an account if you do not have one
+
+![Creating an account takes less than a minute!](src/img/landing2.png)
+
+#### Create your profile
+
 ## Update threads
 
 ### May 20, 2019 Update
