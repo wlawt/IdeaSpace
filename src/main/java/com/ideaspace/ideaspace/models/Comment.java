@@ -11,7 +11,6 @@ public class Comment {
     String id;
     String postId;
     String accountId;
-    /* String name; */
     String comment;
     int like = 0;
     ArrayList<String> likes = new ArrayList<>();
@@ -22,7 +21,6 @@ public class Comment {
 
     public Comment(String id, String postId, ArrayList<String> likes, String accountId, String comment, int like,
             int dislike) {
-        /* this.name = name; */
         this.postId = postId;
         this.accountId = accountId;
         this.comment = comment;
@@ -56,19 +54,9 @@ public class Comment {
         this.accountId = accountId;
     }
 
-    /*
-     * public String getName() { return name; }
-     * 
-     * public void setName(String name) { this.name = name; }
-     */
-
     public int getLikes() {
         return likes.size();
     }
-
-    /*
-     * public void setLikes(String i) { this.likes = likes; }
-     */
 
     public String getComment() {
         return comment;

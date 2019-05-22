@@ -44,7 +44,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/profile/**").permitAll().antMatchers("/comments/**").permitAll().anyRequest()
                 .authenticated().and().csrf().disable().exceptionHandling()
                 .authenticationEntryPoint(unauthorizedEntryPoint()).and().apply(new JwtConfigurer(jwtTokenProvider));
-        // .antMatchers("/api/products/**").hasAuthority("ADMIN")
     }
 
     @Override

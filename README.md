@@ -72,6 +72,12 @@ Have discussions by commenting on each other's posts.
 
 ## Update threads
 
+### May 21, 2019 Update
+
+- Comments added for unclear functions in the code
+
+- Documentation added with a step-by-step guideline
+
 ### May 20, 2019 Update
 
 - Sorting function api function created
