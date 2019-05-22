@@ -1,6 +1,8 @@
 ## IdeaSpace - ICS Summative
 
-A blogging web application for people to share their journeys / experiences.
+IdeaSpace is a free application that is targeted towards secondary school students
+who want to share their academic findings, experiences, fun facts with a group of people
+with a similar interest.
 
 ## Running Ideaspace
 
@@ -40,7 +42,7 @@ npm install --save axios jwt-decode react-redux react-router-dom redux redux-thu
 - Spring Security
 - Spring Web
 
-To install Spring Boot and its dependencies, use this [link]
+To install Spring Boot and its dependencies, use this [link].
 
 [link]: https://start.spring.io/
 
