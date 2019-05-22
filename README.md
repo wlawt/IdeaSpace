@@ -48,7 +48,7 @@ To install Spring Boot and its dependencies, use this [link]
 
 #### Login or create an account if you do not have one
 
-![Creating an account takes less than a minute!](client/src/img/doc1.jpg)
+![Creating an account takes less than a minute!](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/landing2.png)
 
 #### Create your profile
 
