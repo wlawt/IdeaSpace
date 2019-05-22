@@ -1,7 +1,7 @@
 ## IdeaSpace - ICS Summative
 
 IdeaSpace is a free application that is targeted towards secondary school students
-who want to share their academic findings, experiences, fun facts with a group of people
+who want to share their academic findings, experiences, and fun facts with a group of people
 with a similar interest.
 
 ## Running Ideaspace
