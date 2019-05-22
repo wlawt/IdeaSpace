@@ -46,11 +46,29 @@ To install Spring Boot and its dependencies, use this [link]
 
 ## Instructions - Step-by-Step Guide:
 
-#### Login or create an account if you do not have one
+#### 1. Login or create an account if you do not have one
 
-![Creating an account takes less than a minute!](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/landing2.png)
+![Creating an account takes less than a minute!](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/doc1.jpg)
 
-#### Create your profile
+#### 2. Create your profile
+
+![Create your profile using the dashboard](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/doc2.jpg)
+
+#### 3. Make your first post
+
+![Create your first post in minutes!](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/doc3.jpg)
+
+#### 4. View other's posts
+
+![View other's posts by scrolling down](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/doc4.jpg)
+
+![Click on the thumbnail to view post](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/doc5.jpg)
+
+Have discussions by commenting on each other's posts.
+
+#### 5. Share your profile to expand your network
+
+![Use the URL provided](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/doc6.jpg)
 
 ## Update threads
 
