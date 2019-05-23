@@ -15,6 +15,12 @@ git clone https://github.com/tRieMeRalD/IdeaSpace.git
 cd IdeaSpace
 ```
 
+#### View the front-end source code:
+
+To view the source code for the front-end, click [here].
+
+[here]: https://github.com/tRieMeRalD/IdeaSpace-Frontend
+
 #### To run ReactJS build:
 
 ```
