@@ -80,6 +80,12 @@ Have discussions by commenting on each other's posts.
 
 ## Update threads
 
+### May 23, 2019 Update
+
+- Error handling being implemented
+
+- Error handling added for Login.js and Signup.js
+
 ### May 22, 2019 Update
 
 - Redirecting dashboard to edit profile if user already has a profile
