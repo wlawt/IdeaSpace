@@ -80,6 +80,12 @@ Have discussions by commenting on each other's posts.
 
 ## Update threads
 
+### May 24, 2019 Update
+
+- Error handling complete
+
+- Error handling added for Edit.js, EditProfile.js, Dashboard.js, Create.js
+
 ### May 23, 2019 Update
 
 - Error handling being implemented
