@@ -7,12 +7,15 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 public class JwtConfigurer extends SecurityConfigurerAdapter<DefaultSecurityFilterChain, HttpSecurity> {
 
+    // Create token variable
     private JwtTokenProvider jwtTokenProvider;
 
+    // Set token to variable
     public JwtConfigurer(JwtTokenProvider jwtTokenProvider) {
         this.jwtTokenProvider = jwtTokenProvider;
     }
 
+    // Set token to HTML head after checking from the filter function
     @Override
     public void configure(HttpSecurity http) throws Exception {
         JwtTokenFilter customFilter = new JwtTokenFilter(jwtTokenProvider);

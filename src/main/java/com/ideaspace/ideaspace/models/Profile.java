@@ -3,6 +3,7 @@ package com.ideaspace.ideaspace.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+// Profile database structure
 @Document(collection = "profile")
 public class Profile {
     @Id
@@ -34,6 +35,7 @@ public class Profile {
         this.fullname = fullname;
     }
 
+    /* GETTER AND SETTER functions */
     public String getAccountId() {
         return accountId;
     }

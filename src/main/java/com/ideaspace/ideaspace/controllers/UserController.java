@@ -16,11 +16,13 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
+    // Get all users from database
     @RequestMapping(method = RequestMethod.GET, value = "/users")
     public Iterable<User> user() {
         return userRepository.findAll();
     }
 
+    // Delete user account
     @RequestMapping(method = RequestMethod.DELETE, value = "/users/{id}")
     public String delete(@PathVariable String id) {
         Optional<User> optUser = userRepository.findById(id);

@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+// User database structure
 @Document(collection = "users")
 public class User {
 
@@ -29,6 +30,7 @@ public class User {
         this.fullname = fullname;
     }
 
+    /* GETTER AND SETTER functions */
     public String getId() {
         return id;
     }

@@ -20,6 +20,7 @@ public class JwtTokenFilter extends GenericFilterBean {
         this.jwtTokenProvider = jwtTokenProvider;
     }
 
+    // Validate token and sets token to auth
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain filterChain)
             throws IOException, ServletException {

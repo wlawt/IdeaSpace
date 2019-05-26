@@ -1,7 +1,7 @@
 package com.ideaspace.ideaspace.controllers;
 
+// GETTER and SETTER functions for updating and assigning values
 public class AuthBody {
-
     private String email;
     private String password;
 

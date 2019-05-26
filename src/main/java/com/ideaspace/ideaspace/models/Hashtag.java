@@ -3,6 +3,7 @@ package com.ideaspace.ideaspace.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+// Hashtag database structure
 @Document(collection = "hashtag")
 public class Hashtag {
     @Id
@@ -18,6 +19,7 @@ public class Hashtag {
         this.accountId = accountId;
     }
 
+    /* GETTER AND SETTER functions */
     public String getId() {
         return id;
     }

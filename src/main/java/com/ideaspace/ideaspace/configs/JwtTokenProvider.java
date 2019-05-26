@@ -29,39 +29,41 @@ public class JwtTokenProvider {
     @Value("${security.jwt.token.secret-key:secret}")
     private String secretKey = "secret";
 
+    // 1 hour expiry
     @Value("${security.jwt.token.expire-length:3600000}")
-    private long validityInMilliseconds = 3600000; // 1h
+    private long validityInMilliseconds = 3600000;
 
     @Autowired
     private CustomUserDetailsService userDetailsService;
 
+    // Encrypts the password
     @PostConstruct
     protected void init() {
         secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
     }
 
+    // Generate the token hash
     public String createToken(String username, Set<Role> set) {
         Claims claims = Jwts.claims().setSubject(username);
         claims.put("roles", set);
         Date now = new Date();
         Date validity = new Date(now.getTime() + validityInMilliseconds);
-        return Jwts.builder()//
-                .setClaims(claims)//
-                .setIssuedAt(now)//
-                .setExpiration(validity)//
-                .signWith(SignatureAlgorithm.HS256, secretKey)//
-                .compact();
+        return Jwts.builder().setClaims(claims).setIssuedAt(now).setExpiration(validity)
+                .signWith(SignatureAlgorithm.HS256, secretKey).compact();
     }
 
+    // Check is user is authorized
     public Authentication getAuthentication(String token) {
         UserDetails userDetails = this.userDetailsService.loadUserByUsername(getUsername(token));
         return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
     }
 
+    // Get user input --> specifically username
     public String getUsername(String token) {
         return Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody().getSubject();
     }
 
+    // Bearertoken for HTML head
     public String resolveToken(HttpServletRequest req) {
         String bearerToken = req.getHeader("Authorization");
         if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
@@ -70,6 +72,7 @@ public class JwtTokenProvider {
         return null;
     }
 
+    // Checks token to see if expired or doesn't exist
     public boolean validateToken(String token) {
         try {
             Jws<Claims> claims = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token);

@@ -11,10 +11,12 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class IdeaspaceApplication {
 
+	// Start server
 	public static void main(String[] args) {
 		SpringApplication.run(IdeaspaceApplication.class, args);
 	}
 
+	// For auth purposes
 	@Bean
 	CommandLineRunner init(RoleRepository roleRepository) {
 

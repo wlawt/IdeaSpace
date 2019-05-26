@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+// Comment database structure
 @Document(collection = "comments")
 public class Comment {
     @Id
@@ -29,7 +30,7 @@ public class Comment {
         this.dislike = dislike;
     }
 
-    /* GETT AND SETTER */
+    /* GETTER AND SETTER functions */
     public String getId() {
         return id;
     }

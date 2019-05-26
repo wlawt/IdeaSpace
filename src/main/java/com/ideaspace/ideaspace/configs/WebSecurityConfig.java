@@ -33,24 +33,27 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
+    // Allow these paths as PUBLIC (permitAll) or PRIVATE (authenticated)
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().disable().csrf().disable().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authorizeRequests().antMatchers("/")
                 .permitAll().antMatchers("/login").permitAll().antMatchers("/api/auth/login").permitAll()
-                .antMatchers("/api/auth/register").permitAll().antMatchers("/api/products/**").permitAll()
-                .antMatchers("/profile/**").permitAll().antMatchers("/users/**").permitAll().antMatchers("/roles")
-                .permitAll().antMatchers("/hashtags/**").permitAll().antMatchers("/posts/**").permitAll()
-                .antMatchers("/profile/**").permitAll().antMatchers("/comments/**").permitAll().anyRequest()
-                .authenticated().and().csrf().disable().exceptionHandling()
-                .authenticationEntryPoint(unauthorizedEntryPoint()).and().apply(new JwtConfigurer(jwtTokenProvider));
+                .antMatchers("/api/auth/register").permitAll().antMatchers("/profile/**").permitAll()
+                .antMatchers("/users/**").permitAll().antMatchers("/roles").permitAll().antMatchers("/hashtags/**")
+                .permitAll().antMatchers("/posts/**").permitAll().antMatchers("/profile/**").permitAll()
+                .antMatchers("/comments/**").permitAll().anyRequest().authenticated().and().csrf().disable()
+                .exceptionHandling().authenticationEntryPoint(unauthorizedEntryPoint()).and()
+                .apply(new JwtConfigurer(jwtTokenProvider));
     }
 
+    // Ignore these routes
     @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
     }
 
+    // Hashes password
     @Bean
     public PasswordEncoder bCryptPasswordEncoder() {
         return new BCryptPasswordEncoder();
@@ -62,6 +65,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
+    // Attempt to access unauthorized route
     @Bean
     public AuthenticationEntryPoint unauthorizedEntryPoint() {
         return (request, response, authException) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED,

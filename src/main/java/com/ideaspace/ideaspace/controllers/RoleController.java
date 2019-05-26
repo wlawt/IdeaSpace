@@ -13,6 +13,7 @@ public class RoleController {
     @Autowired
     RoleRepository roleRepository;
 
+    // For auth purposes
     @RequestMapping(method = RequestMethod.GET, value = "/roles")
     public Iterable<Role> role() {
         return roleRepository.findAll();

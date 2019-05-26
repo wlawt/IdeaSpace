@@ -3,6 +3,7 @@ package com.ideaspace.ideaspace.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+// Posts database structures
 @Document(collection = "posts")
 public class Post {
     @Id
@@ -29,7 +30,7 @@ public class Post {
         this.imageURL = imageURL;
     }
 
-    /* GETTER AND SETTER */
+    /* GETTER AND SETTER functions */
     public String getId() {
         return id;
     }

@@ -29,7 +29,7 @@ import com.ideaspace.ideaspace.repositories.UserRepository;
 import com.ideaspace.ideaspace.services.CustomUserDetailsService;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api/auth") // Route path for axios frontend
 public class AuthController {
 
     @Autowired
@@ -49,13 +49,18 @@ public class AuthController {
     public ResponseEntity login(@RequestBody AuthBody data) {
         try {
             String username = data.getEmail();
+
+            // Check if password matches the database auth
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, data.getPassword()));
             String token = jwtTokenProvider.createToken(username, this.userRepository.findByEmail(username).getRoles());
+
             Map<Object, Object> model = new HashMap<>();
-            model.put("username", username);
-            model.put("token", token);
+            model.put("username", username); // Store email
+            model.put("token", token); // Store hash token
+
             return ok(model);
         } catch (AuthenticationException e) {
+            // If login creds are wrong
             throw new BadCredentialsException("Invalid email/password supplied");
         }
     }
@@ -64,19 +69,23 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody User user) {
         User userExists = userService.findUserByEmail(user.getEmail());
+        // Check if users exists in database
         if (userExists != null) {
             throw new BadCredentialsException("User with username: " + user.getEmail() + " already exists");
         }
+
+        // If doesn't exist --> save user to database
         userService.saveUser(user);
         Map<Object, Object> model = new HashMap<>();
         model.put("message", "User registered successfully");
         return ok(model);
     }
 
-    /* @SuppressWarnings("rawtypes") */
     @GetMapping("/logout")
     public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        // Check auth if present
         if (auth != null) {
             new SecurityContextLogoutHandler().logout(request, response, auth);
         }

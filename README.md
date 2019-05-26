@@ -80,6 +80,12 @@ Have discussions by commenting on each other's posts.
 
 ## Update threads
 
+### May 25, 2019 Update
+
+- Code cleaning
+
+- Comments added
+
 ### May 24, 2019 Update
 
 - Error handling complete

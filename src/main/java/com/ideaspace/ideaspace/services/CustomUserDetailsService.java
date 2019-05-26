@@ -31,10 +31,12 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Autowired
     private PasswordEncoder bCryptPasswordEncoder;
 
+    // Used in the role repository for auth purposes
     public User findUserByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 
+    // Set user to ADMIN role
     public void saveUser(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setEnabled(true);
@@ -43,6 +45,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         userRepository.save(user);
     }
 
+    // Login user by email that they enter
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 
@@ -51,16 +54,19 @@ public class CustomUserDetailsService implements UserDetailsService {
             List<GrantedAuthority> authorities = getUserAuthority(user.getRoles());
             return buildUserForAuthentication(user, authorities);
         } else {
+            // Return error if email not found in database
             throw new UsernameNotFoundException("username not found");
         }
     }
 
+    // Set permissions for user once if auth is verified
     private List<GrantedAuthority> getUserAuthority(Set<Role> userRoles) {
         Set<GrantedAuthority> roles = new HashSet<>();
         userRoles.forEach((role) -> {
             roles.add(new SimpleGrantedAuthority(role.getRole()));
         });
 
+        // Allows to access private routes
         List<GrantedAuthority> grantedAuthorities = new ArrayList<>(roles);
         return grantedAuthorities;
     }

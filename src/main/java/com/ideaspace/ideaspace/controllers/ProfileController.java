@@ -18,16 +18,16 @@ public class ProfileController {
     ProfileRepository profileRepository;
 
     /*
-     * Route: /createprofile Status: PUBLIC FUNC: Update profile database
-     */
-    /*
-     * Route: /displayprofile Status: PUBLIC FUNC: Get listings of profiles
+     * Route: /profile Status: PUBLIC FUNC: Get listings of profiles
      */
     @RequestMapping(method = RequestMethod.GET, value = "/profile")
     public Iterable<Profile> profile() {
         return profileRepository.findAll();
     }
 
+    /*
+     * Route: /profile/:id Status: PUBLIC FUNC: Save profile info to database
+     */
     @RequestMapping(method = RequestMethod.POST, value = "/profile/{id}")
     public Profile save(@RequestBody Profile profile) {
         profileRepository.save(profile);
@@ -44,6 +44,9 @@ public class ProfileController {
         return profileRepository.findById(id);
     }
 
+    /*
+     * Route: /profile/:id Status: PUBLIC FUNC: Delete account
+     */
     @RequestMapping(method = RequestMethod.DELETE, value = "/profile/{id}")
     public String delete(@PathVariable String id) {
         Optional<Profile> optProfile = profileRepository.findById(id);
@@ -53,6 +56,9 @@ public class ProfileController {
         return "";
     }
 
+    /*
+     * Route: /profile/:id Status: PUBLIC FUNC: Update profile settings
+     */
     @RequestMapping(method = RequestMethod.PUT, value = "/profile/{id}")
     public Profile update(@PathVariable String id, @RequestBody Profile profile) {
         Optional<Profile> optProfile = profileRepository.findById(id);

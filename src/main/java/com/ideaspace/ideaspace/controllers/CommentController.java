@@ -19,11 +19,13 @@ public class CommentController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/comments")
     public Iterable<Comment> comment() {
+        // Return all comments
         return commentRepository.findAll();
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/comments/{id}")
     public Comment save(@RequestBody Comment comment) {
+        // Save data that comes from the frontend
         commentRepository.save(comment);
 
         return comment;
@@ -31,6 +33,7 @@ public class CommentController {
 
     @RequestMapping(method = RequestMethod.PUT, value = "/comments/{id}")
     public Comment update(@PathVariable String id, @RequestBody Comment comment) {
+        // Update comment to respected post ID
         Optional<Comment> optLike = commentRepository.findById(id);
         Comment c = optLike.get();
 
@@ -42,11 +45,13 @@ public class CommentController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/comments/{id}")
     public Optional<Comment> show(@PathVariable String id) {
+        // Show the comments with respect to the specific post
         return commentRepository.findById(id);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/comments/{id}")
     public String delete(@PathVariable String id) {
+        // Delete comment by ID
         Optional<Comment> optComment = commentRepository.findById(id);
         Comment comment = optComment.get();
         commentRepository.delete(comment);

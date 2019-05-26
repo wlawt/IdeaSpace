@@ -19,11 +19,13 @@ public class HashtagController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/hashtags")
     public Iterable<Hashtag> hashtag() {
+        // Return all hashtags from database
         return hashtagRepository.findAll();
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/hashtags")
     public Hashtag save(@RequestBody Hashtag hashtag) {
+        // Save hashtag info to database
         hashtagRepository.save(hashtag);
 
         return hashtag;
@@ -31,6 +33,7 @@ public class HashtagController {
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/hashtags/{id}")
     public String delete(@PathVariable String id) {
+        // Delete hashtag by ID
         Optional<Hashtag> optHashtag = hashtagRepository.findById(id);
         Hashtag hashtag = optHashtag.get();
 

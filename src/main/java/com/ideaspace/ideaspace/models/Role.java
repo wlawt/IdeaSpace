@@ -5,6 +5,7 @@ import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+// Role database structure
 @Document(collection = "roles")
 public class Role {
 
@@ -14,6 +15,7 @@ public class Role {
 
     private String role;
 
+    /* GETTER AND SETTER functions */
     public String getId() {
         return id;
     }
