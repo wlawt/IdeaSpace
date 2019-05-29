@@ -56,21 +56,21 @@ To install Spring Boot and its dependencies, use this [link].
 
 #### 1. Login or create an account if you do not have one
 
-![Creating an account takes less than a minute!](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/doc1.jpg)
+![Creating an account takes less than a minute!](https://github.com/tRieMeRalD/IdeaSpace/blob/master/img/doc1.jpg)
 
 #### 2. Create your profile
 
-![Create your profile using the dashboard](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/doc2.jpg)
+![Create your profile using the dashboard](https://github.com/tRieMeRalD/IdeaSpace/blob/master/img/doc2.jpg)
 
 #### 3. Make your first post
 
-![Create your first post in minutes!](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/doc3.jpg)
+![Create your first post in minutes!](https://github.com/tRieMeRalD/IdeaSpace/blob/master/img/doc3.jpg)
 
 #### 4. View other's posts
 
-![View other's posts by scrolling down](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/doc4.jpg)
+![View other's posts by scrolling down](https://github.com/tRieMeRalD/IdeaSpace/blob/master/img/doc4.jpg)
 
-![Click on the thumbnail to view post](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/doc5.jpg)
+![Click on the thumbnail to view post](https://github.com/tRieMeRalD/IdeaSpace/blob/master/img/doc5.jpg)
 
 Have discussions by commenting on each other's posts.
 
@@ -79,6 +79,10 @@ Have discussions by commenting on each other's posts.
 ![Use the URL provided](https://github.com/tRieMeRalD/IdeaSpace-Frontend/blob/master/src/img/doc6.jpg)
 
 ## Update threads
+
+### May 28, 2019 Update
+
+- Documentation images updated
 
 ### May 25, 2019 Update
 
