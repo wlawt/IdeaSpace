@@ -80,6 +80,14 @@ Have discussions by commenting on each other's posts.
 
 ## Update threads
 
+### May 30, 2019 Update
+
+- Patch 1: Hashtag filter only requires a one button click instead of 2
+
+- Patch 2: Deleting and liking comments should refresh to the same post
+
+- Patch 3: For new users, "No profile" should only be shown once.
+
 ### May 28, 2019 Update
 
 - Documentation images updated
