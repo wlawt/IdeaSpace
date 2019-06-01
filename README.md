@@ -80,6 +80,14 @@ Have discussions by commenting on each other's posts.
 
 ## Update threads
 
+### June 1, 2019 Update
+
+- Patch 5: Show success message after editing a post
+
+- Patch 6: Show success message after editing a profile
+
+- Patch 7: Show success message after creating a post
+
 ### May 31, 2019 Update
 
 - Patch 4: After creating your posts, it will redirect to your recently made post
