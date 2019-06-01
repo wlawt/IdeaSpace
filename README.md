@@ -80,6 +80,10 @@ Have discussions by commenting on each other's posts.
 
 ## Update threads
 
+### May 31, 2019 Update
+
+- Patch 4: After creating your posts, it will redirect to your recently made post
+
 ### May 30, 2019 Update
 
 - Patch 1: Hashtag filter only requires a one button click instead of 2
